@@ -1,23 +1,32 @@
+
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro; //Add the UI Namespace
 
 public class ScoreManager : MonoBehaviour
 {
-    public int scoreAmount;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int score;
+    public TextMeshProUGUI scoreText;// Reference the UI Text
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        UpdateScoreText();
     }
 
     
-    public void IncreaseScoreText(int scoreAmount)
+    public void IncreaseScoreText(int amount)
     {
+        score += amount;//Increase score by amount
+        UpdateScoreText(); //Update Score Text UI
+    }
+     public void DecreaseScoreText(int amount)
+    {
+        score -= amount;//Decrease score by amount
+        UpdateScoreText(); //Update Score Text UI
+    }
 
+    public void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score;
     }
 }
