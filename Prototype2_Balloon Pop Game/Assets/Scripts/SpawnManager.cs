@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public float startDelay = 0.5f;
     public float spawnInterval = 1.5f;
     public float xRange = 10.0f;
+    public float yPos = -10.0f;
 
 
     void Start()
@@ -18,11 +19,10 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomBalloon()
     {
         //Get a random position on the X-Axis
-        Vector3 spawnPos = new Vector3(Random.Range(-xRange, +xRange), 0, 0);
+        Vector3 spawnPos = new Vector3(Random.Range(-xRange, +xRange), yPos, 0);
         //Pick a random balloon from the balloon array
         int balloonIndex = Random.Range(0, balloonPrefabs.Length);
         //Spawn random balloon at the spawn point
         Instantiate(balloonPrefabs[balloonIndex], spawnPos, balloonPrefabs[balloonIndex].transform.rotation);
     }
 }
-

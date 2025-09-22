@@ -288,7 +288,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.9, y: -5.6394, z: 4.1603}
-  m_LocalScale: {x: 10.125481, y: 10.125481, z: 10.125481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3202278822030923980}
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickToPop: 3
-  scaleToIncrease: 0.8
+  scaleToIncrease: 0.3
   scoreToGive: 1
   popEffect: {fileID: 5879594058465281204, guid: f8204d1114ce9ac4982b1f8b81e198e0, type: 3}
 --- !u!114 &3598563204996480169
@@ -374,4 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdd9a0e374f26345a40f3a38027686c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 26
+  speed: 4
+  upperBound: 15
+  scoreManager: {fileID: 0}
+  balloon: {fileID: 0}
