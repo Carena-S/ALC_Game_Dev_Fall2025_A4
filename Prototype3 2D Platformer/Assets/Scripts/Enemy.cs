@@ -28,14 +28,19 @@ public class Enemy : MonoBehaviour
         if (transform.position == targetPos)
         {
             //Missing if statement here. Fix this please!
+
             // Is our target pos our start pos? If so, set it to be the other one
-            targetPos = startPos + moveOffset;
+            if(targetPos == startPos) // Originally if(target.position == start.position)
+            {
+                targetPos = startPos + moveOffset;
+            }
+            else
+            {
+                targetPos = startPos;
+            }
         }
         // Otherwise, do the opposite.
-        else
-        {
-            targetPos = startPos;
-        }
+        
     }
 
 private void OnTriggerEnter2D(Collider2D collision)
